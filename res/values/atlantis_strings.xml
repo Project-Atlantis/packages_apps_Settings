@@ -195,4 +195,8 @@
     <!-- Data usage info in QS footer -->
     <string name="qs_footer_datausage_title">Daily data usage in QS footer</string>
     <string name="qs_footer_datausage_summary">Display daily data usage summary in quick settings footer</string>
+
+    <!-- Atlantis Maintainer -->
+    <string name="Atlantis_maintainer">Device Maintainer</string>
 </resources>
+
