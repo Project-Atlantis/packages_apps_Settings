@@ -68,8 +68,8 @@ public class AtlantisVersionDetailPreferenceController extends BasePreferenceCon
 	String atlantisReleasetype =  SystemProperties.get(KEY_ATLANTIS_RELEASETYPE_PROP);
         String atlantisZiptype =  SystemProperties.get(KEY_ATLANTIS_ZIPTYPE_PROP);
 
-	if (!atlantisVer[1].isEmpty() && !atlantisReleasetype.isEmpty() && !atlantisZiptype.isEmpty())
-	    return atlantisVer[1] + " | " + atlantisZiptype + " | " + atlantisReleasetype;
+	if (!atlantisVer[0].isEmpty() && !atlantisReleasetype.isEmpty() && !atlantisZiptype.isEmpty())
+	    return atlantisVer[0] + " | " + atlantisZiptype + " | " + atlantisReleasetype;
       else
             return mContext.getString(R.string.unknown);
     }
