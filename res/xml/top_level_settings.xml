@@ -21,6 +21,15 @@
     android:key="top_level_settings">
 
     <com.android.settings.widget.HomepagePreference
+        android:fragment="com.atlantis.hub.AtlantisMenu"
+        android:icon="@drawable/ic_atlantis"
+        android:key="top_level_atlantishub"
+        android:order="-160"
+        android:title="@string/atlantis_menu_title"
+        android:summary="@string/atlantis_menu_summary"
+        settings:controller="com.atlantis.hub.AtlantisMenu" />
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"

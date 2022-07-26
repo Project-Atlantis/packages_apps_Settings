@@ -198,5 +198,9 @@
 
     <!-- Atlantis Maintainer -->
     <string name="Atlantis_maintainer">Device Maintainer</string>
+
+    <!-- AtlantisHub -->
+    <string name="atlantis_menu_title">AtlantisHub</string>
+    <string name="atlantis_menu_summary">Features for you from beyond the Seas!</string>
 </resources>
 

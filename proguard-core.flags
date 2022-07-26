@@ -1,0 +1,2 @@
+# AtlantisHub
+-keep class com.atlantis.hub.**
