@@ -35,15 +35,15 @@ import com.android.settings.core.BasePreferenceController;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 
-public class ArrowVersionDetailPreferenceController extends BasePreferenceController {
+public class AtlantisVersionDetailPreferenceController extends BasePreferenceController {
 
-    private static final String TAG = "ArrowVersionDialogCtrl";
+    private static final String TAG = "AtlantisVersionDialogCtrl";
     private static final int DELAY_TIMER_MILLIS = 500;
     private static final int ACTIVITY_TRIGGER_COUNT = 3;
 
-    private static final String KEY_ARROW_VERSION_PROP = "ro.modversion";
-    private static final String KEY_ARROW_RELEASETYPE_PROP = "ro.arrow.releasetype";
-    private static final String KEY_ARROW_ZIPTYPE_PROP = "ro.arrow.ziptype";
+    private static final String KEY_ATLANTIS_VERSION_PROP = "ro.modversion";
+    private static final String KEY_ATLANTIS_RELEASETYPE_PROP = "ro.atlantis.releasetype";
+    private static final String KEY_ATLANTIS_ZIPTYPE_PROP = "ro.atlantis.ziptype";
 
     private final UserManager mUserManager;
     private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];
@@ -51,7 +51,7 @@ public class ArrowVersionDetailPreferenceController extends BasePreferenceContro
     private RestrictedLockUtils.EnforcedAdmin mFunDisallowedAdmin;
     private boolean mFunDisallowedBySystem;
 
-    public ArrowVersionDetailPreferenceController(Context context, String key) {
+    public AtlantisVersionDetailPreferenceController(Context context, String key) {
         super(context, key);
         mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
         initializeAdminPermissions();
@@ -64,13 +64,13 @@ public class ArrowVersionDetailPreferenceController extends BasePreferenceContro
 
     @Override
     public CharSequence getSummary() {
-	String[] arrowVer = SystemProperties.get(KEY_ARROW_VERSION_PROP).split("v");
-	String arrowReleasetype =  SystemProperties.get(KEY_ARROW_RELEASETYPE_PROP);
-        String arrowZiptype =  SystemProperties.get(KEY_ARROW_ZIPTYPE_PROP);
+	String[] atlantisVer = SystemProperties.get(KEY_ATLANTIS_VERSION_PROP).split("v");
+	String atlantisReleasetype =  SystemProperties.get(KEY_ATLANTIS_RELEASETYPE_PROP);
+        String atlantisZiptype =  SystemProperties.get(KEY_ATLANTIS_ZIPTYPE_PROP);
 
-	if (!arrowVer[1].isEmpty() && !arrowReleasetype.isEmpty() && !arrowZiptype.isEmpty())
-	    return arrowVer[1] + " | " + arrowZiptype + " | " + arrowReleasetype;
-	else
+	if (!atlantisVer[1].isEmpty() && !atlantisReleasetype.isEmpty() && !atlantisZiptype.isEmpty())
+	    return atlantisVer[1] + " | " + atlantisZiptype + " | " + atlantisReleasetype;
+      else
             return mContext.getString(R.string.unknown);
     }
 
